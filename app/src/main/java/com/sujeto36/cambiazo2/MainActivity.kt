@@ -58,20 +58,22 @@ class MainActivity : AppCompatActivity() {
                 if (order) {
                     order = false
                     coinValue = 1 / preferences.getCoinValue()
-                    convertCoin()
                     preferences.setCoinName(text_view_arg)
                     preferences.setColor(text_view_arg)
                     text_view_coin.text = getText(R.string.text_arg)
                     text_view_coin.setTextColor(ContextCompat.getColor(this, R.color.colorArg))
+                    edit_text_coin.setText("")
+                    text_view_arg_val.text = getText(R.string.initial)
                 }
                 else {
                     order = true
                     coinValue = preferences.getCoinValue()
-                    convertCoin()
                     preferences.setCoinName(text_view_coin)
                     preferences.setColor(text_view_coin)
                     text_view_arg.text = getText(R.string.text_arg)
                     text_view_arg.setTextColor(ContextCompat.getColor(this, R.color.colorArg))
+                    edit_text_coin.setText("")
+                    text_view_arg_val.text = getText(R.string.initial)
                 }
                 true
             }
