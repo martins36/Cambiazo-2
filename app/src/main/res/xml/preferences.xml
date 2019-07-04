@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/text_coin">
+
+        <EditTextPreference
+                android:defaultValue="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
+                android:title="@string/text_coin_value"
+                android:key="preference_coin_value"/>
+
+        <EditTextPreference
+                android:defaultValue="ARG"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:maxLength="3"
+                android:title="@string/text_coin_name"
+                android:key="preference_coin_name"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/text_appearance">
+
+        <SwitchPreference
+                android:defaultValue="false"
+                android:title="@string/text_theme"
+                android:key="preference_dark_theme"/>
+
+        <ListPreference
+                android:defaultValue="2"
+                android:title="@string/text_color"
+                android:entries="@array/colors"
+                android:entryValues="@array/colorsValues"
+                android:key="preference_colors"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
