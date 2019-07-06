@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun convertCoin(){
-        if (edit_text_coin.text.toString() == "")
+        if (edit_text_coin.text.toString() == "" || edit_text_coin.text.toString() == ".")
             text_view_arg_val.text = getText(R.string.initial)
         else
             text_view_arg_val.text = String.format("%.2f", coinValue * (edit_text_coin.text).toString().toFloat())
